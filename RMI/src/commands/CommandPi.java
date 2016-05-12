@@ -2,9 +2,12 @@ package commands;
 
 import java.math.BigDecimal;
 
+import callback.Callback;
+
 public class CommandPi implements Command{
 
 	private static final long serialVersionUID = 227L;
+	private Callback callback;
 
 
 	public BigDecimal execute() {
@@ -27,8 +30,9 @@ public class CommandPi implements Command{
      * Construct a task to calculate pi to the specified
      * precision.
      */
-    public CommandPi (int digits) {
+    public CommandPi (int digits, Callback callback) {
         this.digits = digits;
+        this.callback = callback;
     }
 
     /**

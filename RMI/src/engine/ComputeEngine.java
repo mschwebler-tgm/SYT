@@ -28,13 +28,14 @@ public class ComputeEngine implements Compute{
             System.setSecurityManager(new SecurityManager());
         }
         try {
+        	String name = "Compute";
         	//Create new Service
         	ConcreteService s = new ConcreteService();
         	//Init Registry
-        	Registry reg = LocateRegistry.getRegistry();
+        	Registry reg = LocateRegistry.createRegistry(1099);
         	Service stub = (Service) UnicastRemoteObject.exportObject(s, 0);
         	//rebind instead of bind to avoid Exceptions when already bound
-        	reg.rebind("CalculatePi", stub);
+        	reg.rebind(name, stub);
         	
         	/** 
         	 * Old code:
