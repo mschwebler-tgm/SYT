@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;commands.CommandE&apos; to &apos;CommandPi&apos;&#x0D;&#x0A;- Original project: &apos;RMI&apos;&#x0D;&#x0A;- Original element: &apos;commands.CommandE&apos;&#x0D;&#x0A;- Renamed element: &apos;commands.CommandPi&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CommandE&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;commands{CommandE.java[CommandE" matchStrategy="1" name="CommandPi" qualified="false" references="true" similarDeclarations="false" stamp="1463057534640" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,5 @@
+package commands;
+
+public class CommandE {
+	private static final long serialVersionID = 227L;
+}
