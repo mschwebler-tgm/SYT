@@ -5,6 +5,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 import remoteService.DoSomethingService;
+import server.commands.CalculationCommand;
 import server.commands.Command;
 import server.commands.RegisterCommand;
 import server.commands.LoginCommand;
@@ -23,8 +24,10 @@ public class Client {
 
 			Command rc = new RegisterCommand();
 			Command lc = new LoginCommand();
+			Command cc = new CalculationCommand();
 			uRemoteObject.doSomething(rc);
 			uRemoteObject.doSomething(lc);
+			uRemoteObject.doSomething(cc);
 
 		} catch (RemoteException re) {
 			System.err.println("Service not found?" + " Check your RMI-Registry!");
