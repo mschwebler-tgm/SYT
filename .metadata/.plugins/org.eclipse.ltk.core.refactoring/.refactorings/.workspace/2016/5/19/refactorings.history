@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;RMI_CommandPattern&apos;" deleteContents="true" description="Delete resource &apos;RMI_CommandPattern&apos;" element1="/RMI_CommandPattern" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1463056810395"/>
+</session>
