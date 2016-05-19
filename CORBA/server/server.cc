@@ -29,18 +29,34 @@
 static CORBA::Boolean bindObjectToName(CORBA::ORB_ptr, CORBA::Object_ptr);
 
 
-class Echo_i : public POA_helloworld::Echo
+/**
+ * Eine Klasse die, den Sinus mithilfe der Taylorreihe, bis zu einer gewissen genauigkeit (nmax) berechnet
+ */
+class Calculate : public POA_calculator::Calculate
 {
 public:
-  inline Echo_i() {}
-  virtual ~Echo_i() {}
-  virtual char* echoString(const char* mesg);
+	inline Calculate() {}
+	virtual ~Calculate() {}
+	virtual string calcSin(const int nmax);
 };
 
-
-char* Echo_i::echoString(const char* mesg)
-{
-  return CORBA::string_dup(mesg);
+/**
+* Berechnet den Sinus mithilfe der Taylorreihe
+* param nmax ist die maximale genauigkeit
+* return Sinus
+*/
+int Calculate::calcSin(const int nmax) {
+    string sin = "x";
+    int i = 3;
+    for (int n = 0; n < nmax; n++) {
+        if (n/2 == 0) {
+            sin += " - x^"+i+"/"+i+"!";
+        } else {
+            sin += " + x^"+i+"/"+i+"!";
+        }
+        i = i + 2;
+    }
+	return CORBA::String_var(sin);
 }
 
 //////////////////////////////////////////////////////////////////////
